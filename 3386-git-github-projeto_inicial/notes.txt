@@ -16,3 +16,15 @@ git remote set-url origin https://github.com/seu-usuario/seu-repositorio.git
 -- Clonando um repositório
 git clone URL
 
+-- Envia para o github
+git push -u origin main
+
+-- Puxa para a sua máquina os repositórios
+git pull origin main 
+
+-- Desfazendo Commits
+git revert NUMERO-ID
+
+-- Deletar o commit
+git reset NUMERO-ID
+
