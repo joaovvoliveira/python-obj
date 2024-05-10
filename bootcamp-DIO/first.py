@@ -122,10 +122,6 @@ import datetime
 #15 - Faça um algoritmo que leia o ano em que uma pessoa nasceu, imprima na tela quantos anos, meses e dias essa pessoa ja viveu. Leve em 
 #consideração o ano com 365 dias e o mês com 30 dias.
 
-nasc = int(input("Digite o ano: "))
-hoje = datetime.datetime(2024, 5, 6)
-print(f"{hoje - nasc}")
-
 #import math
 #
 #age=28
@@ -162,5 +158,49 @@ print(f"{hoje - nasc}")
 #print(STATES[2])
 #
 
+import os
+
+def exibir_nome_do_programa():
+    print("""
+░██████╗░█████╗░██████╗░░█████╗░██████╗░  ███████╗██╗░░██╗██████╗░██████╗░███████╗░██████╗░██████╗
+██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗  ██╔════╝╚██╗██╔╝██╔══██╗██╔══██╗██╔════╝██╔════╝██╔════╝
+╚█████╗░███████║██████╦╝██║░░██║██████╔╝  █████╗░░░╚███╔╝░██████╔╝██████╔╝█████╗░░╚█████╗░╚█████╗░
+░╚═══██╗██╔══██║██╔══██╗██║░░██║██╔══██╗  ██╔══╝░░░██╔██╗░██╔═══╝░██╔══██╗██╔══╝░░░╚═══██╗░╚═══██╗
+██████╔╝██║░░██║██████╦╝╚█████╔╝██║░░██║  ███████╗██╔╝╚██╗██║░░░░░██║░░██║███████╗██████╔╝██████╔╝
+╚═════╝░╚═╝░░╚═╝╚═════╝░░╚════╝░╚═╝░░╚═╝  ╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝░░╚═╝╚══════╝╚═════╝░╚═════╝░  
+""")
+
+def exibir_opcoes():
+    print('1. Cadastrar restaurante')
+    print('2. Listar restaurantes')
+    print('3. Ativar restaurante')
+    print('4. Sair\n')
+
+def finalizar_app():
+    os.system('cls')
+    # os.system('clear') 
+    print('Finalizando o app')
+
+def escolher_opcao():
+    opcao_escolhida = int(input('Escolha uma opção: '))
+    # opcao_escolhida = int(opcao_escolhida)
+
+    match opcao_escolhida:
+        case 1: 
+            print('Cadastrar restaurante')
+        case 2:
+            print('Listar restaurantes')
+        case 3: 
+            print('Ativar restaurante')
+        case 4: 
+            finalizar_app()
+
+def main():
+    exibir_nome_do_programa()
+    exibir_opcoes()
+    escolher_opcao()
+
+if __name__ == '__main__':
+    main()
 
 
