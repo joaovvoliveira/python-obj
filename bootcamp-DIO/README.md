@@ -20,11 +20,6 @@
   💌 Onde me encontrar: ⤵️
 </p>
 
-<p align="left">
-<a href="#" title="Gmail">
-  <img src="https://img.shields.io/badge/-Gmail-FF0000?style=flat-square&labelColor=FF0000&logo=gmail&logoColor=white&link=mailto:jooao.voliveira@gmail.com" alt="Gmail"/></a>
-<a href="#" title="LinkedIn">
-  <img src="https://img.shields.io/badge/-Linkedin-0e76a8?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/jvioliveira" alt="LinkedIn"/></a>
-<a href="#" title="Instagram">
-  <img src="https://img.shields.io/badge/-Instagram-DF0174?style=flat-square&labelColor=DF0174&logo=instagram&logoColor=white&link=https://www.instagram.com/joaovoliveira_/" alt="Instagram"/></a>
-</p
+[![Linkedin](https://img.shields.io/badge/-username-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/jvioliveira)](https://www.linkedin.com/in/jvioliveira)
+[![Gmail Badge](https://img.shields.io/badge/-seuemail@email.com-006bed?style=flat-square&logo=Gmail&logoColor=white&link=mailto:jooao.voliveira@gmail.com)](mailto:jooao.voliveira@gmail.com)
+[![Instagram](https://img.shields.io/badge/-Instagram-DF0174?style=flat-square&labelColor=DF0174&logo=instagram&logoColor=white&link=https://www.instagram.com/joaovoliveira_/](https://www.instagram.com/joaovoliveira_/)
