@@ -1,3 +1,44 @@
+single branch 
+git clone URL --branch NOME_BRANCH --single-branch
+
+iniciar um rep git
+git init
+
+mostra as alteração / coisas não atualizadas no git
+git status
+
+
+caso crie um git init sem querer, só remover a pasta:
+rm -rf .git
+
+restaurar a ultima alteração do arquivo:
+git restore NOME_ARQUIVO
+
+refaz a mensagem do ultimo commit:
+git commit --amend -m "NOVA_MSG"
+ou
+git commit --amend
+que abrirá uma nova tela de edição
+
+remover o último commit:
+git reset --soft HASH_COMMIT
+
+Criar Branch:
+git checkout -b NOME_BRANCH(teste)
+
+Trocar de Branch:
+git checkout NOME_BRANCH(voltar para a main)
+
+Listar ultimo commit de cada branch:
+git branch -v
+
+Mesclar branchs:
+git merge NOME_DESEJA_MESCLAR(teste)
+
+Deletar uma branch:
+git branch -d NOME_BRANCH(teste) 
+
+
 5 - Faça um algoritmo que leia o valor do salário mínimo e o valor do salário de um usuário, calcule quantos salários mínimos esse 
 usuário ganha e imprima na tela o resultado. (Base para o Salário mínimo R$ 1.293,20).
 
