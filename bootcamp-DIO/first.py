@@ -1,6 +1,3 @@
-import dataclasses
-import datetime
-
 #5 - Faça um algoritmo que leia o valor do salário mínimo e o valor do salário de um usuário, calcule quantos salários mínimos esse 
 #usuário ganha e imprima na tela o resultado. (Base para o Salário mínimo R$ 1.293,20).
 
@@ -157,7 +154,9 @@ import datetime
 #
 #print(STATES[2])
 #
-
+import dataclasses
+import datetime
+import time
 import os
 
 restaurantes = [{'nome':'Praça', 'categoria':'Japonesa', 'ativo':False}, 
@@ -177,8 +176,9 @@ def exibir_nome_do_programa():
 def exibir_opcoes():
     print('1. Cadastrar restaurante')
     print('2. Listar restaurantes')
-    print('3. Alternar estado do restaurante')
-    print('4. Sair\n')
+    print('3. Remover Restaurante')
+    print('4. Alternar estado do restaurante')
+    print('5. Sair\n')
 
 def finalizar_app():
     exibir_subtitulo('Finalizar app')
@@ -221,9 +221,36 @@ def listar_restaurantes():
 
     voltar_ao_menu_principal()
 
+def remover_restaurante():
+    print('\nRestaurantes Cadastrados:\n')
+
+    print(f'{'Nome do restaurante'.ljust(22)} | {'Categoria'.ljust(20)} | Status')
+    for restaurante in restaurantes:
+        nome_restaurante = restaurante['nome']
+        categoria = restaurante['categoria']
+        ativo = 'ativado' if restaurante['ativo'] else 'desativado'
+        print(f'- {nome_restaurante.ljust(20)} | {categoria.ljust(20)} | {ativo}')
+
+    restaurante_excluido = input('\nDigite o nome do restaurante que deseja excluir: ').lower()
+    
+    for restaurante in restaurantes:
+        if restaurante['nome'].lower() == restaurante_excluido:
+            restaurante.pop(['nome','categora','ativo'])
+    
+    print(restaurantes)
+
+        #if restaurante['nome'].lower() == restaurante_excluido:
+        #    restaurante.pop(restaurante_excluido)
+        #    print('Restaurante Excluído !')
+        #else:
+        #    print('Restaurante Inválido')
+    
+    voltar_ao_menu_principal()
+    
+
 def alternar_estado_restaurante():
     exibir_subtitulo('ALterando estado do restaurante')
-    nome_restaurante = input('Digite o nome do restaurante que deseja alterar o estado: ')
+    nome_restaurante = input('Digite o nome do restaurante que deseja alterar o estado: ').lower()
     restaurante_encontrado = False
 
     for restaurante in restaurantes:
@@ -248,8 +275,13 @@ def escolher_opcao():
         elif opcao_escolhida == 2: 
             listar_restaurantes()
         elif opcao_escolhida == 3: 
-            alternar_estado_restaurante()
+            remover_restaurante()
+            #print('Opçao em desenvolvimento\n')
+            #time.sleep(5)
+            main()
         elif opcao_escolhida == 4: 
+            alternar_estado_restaurante()
+        elif opcao_escolhida == 5: 
             finalizar_app()
         else: 
             opcao_invalida()
